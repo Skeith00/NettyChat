@@ -1,4 +1,4 @@
-package chat.chat.server;
+package netty.chat.server;
 
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.EventLoopGroup;
@@ -10,6 +10,7 @@ import io.netty.channel.socket.nio.NioServerSocketChannel;
 public class ChatServer {
 	
 	public static void main(String[] args) throws InterruptedException {
+		System.out.println("Server initializing...");
 		new ChatServer(8000).run();
 	}
 	
@@ -35,7 +36,7 @@ public class ChatServer {
 			bootstrap.bind(port).sync().channel().closeFuture().sync();
 			
 		} catch (Exception e) {
-			// TODO: handle exception
+			System.out.println(e.getMessage());
 		} finally {
 			bossGroup.shutdownGracefully();
 			workerGroup.shutdownGracefully();

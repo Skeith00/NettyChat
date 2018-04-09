@@ -1,4 +1,4 @@
-package chat.chat.beans;
+package netty.chat.beans;
 
 public class User {
 	

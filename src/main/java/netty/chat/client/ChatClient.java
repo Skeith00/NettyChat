@@ -1,4 +1,4 @@
-package chat.chat.client;
+package netty.chat.client;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

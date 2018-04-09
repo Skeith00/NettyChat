@@ -1,4 +1,4 @@
-package chat.chat.chatsample;
+package netty.chat.chatsample;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
