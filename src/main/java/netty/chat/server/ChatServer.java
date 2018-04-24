@@ -5,8 +5,6 @@ import io.netty.channel.EventLoopGroup;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
 
-//https://netty.io/4.0/xref/io/netty/example/telnet/TelnetServer.html
-//https://www.youtube.com/watch?v=tsz-assb1X8
 public class ChatServer {
 	
 	public static void main(String[] args) throws InterruptedException {
@@ -29,9 +27,6 @@ public class ChatServer {
 					.group(bossGroup, workerGroup)
 					.channel(NioServerSocketChannel.class)
 					.childHandler(new ChatServerInitializer());
-			
-			// https://stackoverflow.com/questions/41505852/netty-closefuture-sync-channel-blocks-rest-api
-			// https://stackoverflow.com/questions/28032092/shutdown-netty-programmatically/28034689
 			
 			bootstrap.bind(port).sync().channel().closeFuture().sync();
 			

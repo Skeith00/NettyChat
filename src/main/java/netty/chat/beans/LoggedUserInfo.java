@@ -2,13 +2,13 @@ package netty.chat.beans;
 
 import io.netty.channel.Channel;
 
-public class UserInfo {
+public class LoggedUserInfo {
 	
 	private User user;
 	private Channel channelUser;
 	private ChatRoom currentRoom;
 	
-	public UserInfo(User user, Channel channelUser) {
+	public LoggedUserInfo(User user, Channel channelUser) {
 		this.user = user;
 		this.channelUser = channelUser;
 		currentRoom = null;
